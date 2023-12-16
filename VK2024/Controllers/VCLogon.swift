@@ -13,8 +13,7 @@ class VCLogon: UIViewController {
     @IBOutlet weak var loginInput: UITextField!
     @IBOutlet weak var passwordInput: UITextField!
     @IBAction func pressLogin(_ sender: Any) {
-        
-        
+        loginToApp()
     }
     
     override func viewDidLoad() {
@@ -24,6 +23,13 @@ class VCLogon: UIViewController {
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         // Присваиваем его UIScrollVIew
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
+        
+        loginInput.delegate = self
+        passwordInput.delegate = self
+        
+        loginInput.text = "admin"
+        passwordInput.text = "1"
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -41,6 +47,29 @@ class VCLogon: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
+    
+    func loginToApp(){
+        guard checkUserData() else {
+            showLoginError()
+            return
+        }
+    }
+    
+    func checkUserData() -> Bool {
+        guard loginInput.text! == "admin" && passwordInput.text! == "1" else { return false }
+        return true
+    }
+    
+    func showLoginError() {
+       //Создаем контроллер
+       let alert = UIAlertController(title: "Ошибка", message: "Введены не верные данные пользователя", preferredStyle: .alert)
+       //Создаем кнопку для UIAlertController
+       let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+       //Добавляем кнопку UIAlertController
+       alert.addAction(action)
+       //Показываем UIAlertController
+       present(alert, animated: true, completion: nil)
+   }
     
     // Когда клавиатура появляется
     @objc func keyboardWasShown(notification: Notification) {
@@ -62,6 +91,16 @@ class VCLogon: UIViewController {
     @objc func hideKeyboard(){
         self.scrollView?.endEditing(true)
     }
-
 }
 
+extension VCLogon: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        passwordInput.becomeFirstResponder()
+        guard textField == self.passwordInput else {
+            return true
+        }
+        loginToApp()
+        return textField.endEditing(true)
+    }
+    
+}
