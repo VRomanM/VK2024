@@ -29,7 +29,6 @@ class VCLogon: UIViewController {
         
         loginInput.text = "admin"
         passwordInput.text = "1"
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +52,12 @@ class VCLogon: UIViewController {
             showLoginError()
             return
         }
+        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(identifier: "vkTabBarController")
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
+        
     }
     
     func checkUserData() -> Bool {
