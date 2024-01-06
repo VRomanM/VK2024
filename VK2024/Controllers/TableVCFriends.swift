@@ -8,41 +8,42 @@
 import UIKit
 
 class TableVCFriends: UITableViewController {
-    var myfriends = [
-        UserVK(name: "Первый друг", city: "Москва", photoName: "person.slash.fill"),
-        UserVK(name: "Второй друг", city: "Киров"),
-        UserVK(name: "Третий друг", city: "Город скрыт"),
-        UserVK(name: "Четвертый друг", city: "Москва"),
-        UserVK(name: "Пятый друг", city: "Москва")
-    ]
+    private let apiVK = ApiVK()
+    private var myFriends = [User]()
+    private var choisedFriendId: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myFriends = apiVK.getFriendsList()
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return myfriends.count
+        return myFriends.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell") as! FriendsTVCell
-        let friend = myfriends[indexPath.row]
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath) as? FriendsTVCell else {
+            preconditionFailure("Error")
+        }        
+        let friend = myFriends[indexPath.row]
         cell.initCell(user: friend)
 
         return cell
     }
-
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        guard let vc = sb.instantiateViewController(withIdentifier: "photoVC") as? CollectionVCPhoto else {
+            preconditionFailure("Error")
+        }
+        vc.userID = indexPath.row
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     /*

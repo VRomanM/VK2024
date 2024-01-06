@@ -12,13 +12,13 @@ class FriendsTVCell: UITableViewCell {
     @IBOutlet weak var city: UILabel!
     @IBOutlet weak var photo: UIImageView!
     
-    var friend: UserVK!
+    var friend: User?
     
-    func initCell(user: UserVK){
+    func initCell(user: User){
         self.friend = user
         name.text = user.name
         city.text = user.city
-        photo.image = user.photo
+        photo.image = user.avatar
     }
     
     override func awakeFromNib() {

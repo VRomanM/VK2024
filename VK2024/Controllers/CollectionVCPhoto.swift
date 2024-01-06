@@ -7,18 +7,25 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+//private let reuseIdentifier = "photoCell"
+private var photo = [UserPhoto]()
+private let apiVK = ApiVK()
 
 class CollectionVCPhoto: UICollectionViewController {
-
+    var userID: Int = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        if userID == -1 {
+            preconditionFailure("Error")
+        }
+        photo = apiVK.getPhotoByUserID(userID: userID)
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        //self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         // Do any additional setup after loading the view.
     }
@@ -37,20 +44,22 @@ class CollectionVCPhoto: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return photo.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
-        // Configure the cell
-    
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCVCell else {
+            preconditionFailure("Error")
+        }
+        
+        cell.initCell(userPhoto: photo[indexPath.row])
+        
         return cell
     }
 
