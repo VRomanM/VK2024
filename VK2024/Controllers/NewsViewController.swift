@@ -1,5 +1,5 @@
 //
-//  VCNews.swift
+//  NewsViewController.swift
 //  VK2024
 //
 //  Created by Роман Вертячих on 17.12.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VCNews: UIViewController {
+class NewsViewController: UIViewController {
 
     @IBOutlet weak var newsTable: UITableView! {
         didSet {
@@ -20,11 +20,11 @@ class VCNews: UIViewController {
         super.viewDidLoad()
 //        newsTable.delegate = self
 //        newsTable.dataSource = self
-        newsTable.register(UINib(nibName: "NewsTVCell", bundle: nil), forCellReuseIdentifier: "NewsCell")
+        newsTable.register(UINib(nibName: "NewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsCell")
     }
 }
 
-extension VCNews: UITableViewDataSource {
+extension NewsViewController: UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -35,7 +35,7 @@ extension VCNews: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTVCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "NewsCell", for: indexPath) as! NewsTableViewCell
         return cell
     }
     
@@ -44,7 +44,7 @@ extension VCNews: UITableViewDataSource {
     }
 }
 
-extension VCNews: UITableViewDelegate {
+extension NewsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         print("Нажата строка \(indexPath.row) в секции \(indexPath.section) в таблице новостей")

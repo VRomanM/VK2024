@@ -1,5 +1,5 @@
 //
-//  TableVCGroups.swift
+//  GroupsTableViewController.swift
 //  VK2024
 //
 //  Created by Роман Вертячих on 06.01.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableVCGroups: UITableViewController {
+class GroupsTableViewController: UITableViewController {
     private let apiVK = ApiVK()
     var groups = [Group]()
     

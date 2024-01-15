@@ -1,5 +1,5 @@
 //
-//  CollectionVCPhoto.swift
+//  PhotosCollectionViewController.swift
 //  VK2024
 //
 //  Created by Роман Вертячих on 04.01.2024.
@@ -11,7 +11,7 @@ import UIKit
 private var photo = [UserPhoto]()
 private let apiVK = ApiVK()
 
-class CollectionVCPhoto: UICollectionViewController {
+class PhotosCollectionViewController: UICollectionViewController {
     var userID: Int = -1
     
     override func viewDidLoad() {
@@ -54,7 +54,7 @@ class CollectionVCPhoto: UICollectionViewController {
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCVCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotosCollectionViewCell else {
             preconditionFailure("Error")
         }
         

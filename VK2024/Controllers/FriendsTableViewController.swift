@@ -1,5 +1,5 @@
 //
-//  TableVCFriends.swift
+//  FriendsTableViewController.swift
 //  VK2024
 //
 //  Created by Роман Вертячих on 03.01.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableVCFriends: UITableViewController {
+class FriendsTableViewController: UITableViewController {
     private let apiVK = ApiVK()
     private var myFriends = [User]()
     private var choisedFriendId: Int?
@@ -28,7 +28,7 @@ class TableVCFriends: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath) as? FriendsTVCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath) as? FriendsTableViewCell else {
             preconditionFailure("Error")
         }        
         let friend = myFriends[indexPath.row]
@@ -39,7 +39,7 @@ class TableVCFriends: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        guard let vc = sb.instantiateViewController(withIdentifier: "photoVC") as? CollectionVCPhoto else {
+        guard let vc = sb.instantiateViewController(withIdentifier: "photoVC") as? PhotosCollectionViewController else {
             preconditionFailure("Error")
         }
         vc.userID = indexPath.row

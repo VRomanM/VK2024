@@ -1,5 +1,5 @@
 //
-//  FriendsTVCell.swift
+//  FriendsTableViewCell.swift
 //  VK2024
 //
 //  Created by Роман Вертячих on 03.01.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FriendsTVCell: UITableViewCell {
+class FriendsTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var city: UILabel!
     @IBOutlet weak var photo: UIImageView!

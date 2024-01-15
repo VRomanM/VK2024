@@ -1,5 +1,5 @@
 //
-//  NewsTVCell.swift
+//  NewsTableViewCell.swift
 //  VK2024
 //
 //  Created by Роман Вертячих on 17.12.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NewsTVCell: UITableViewCell {
+class NewsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var newsTitle: UILabel!{
         didSet {
