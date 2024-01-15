@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VCLogon: UIViewController {
+class LogonViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var loginInput: UITextField!
@@ -98,7 +98,7 @@ class VCLogon: UIViewController {
     }
 }
 
-extension VCLogon: UITextFieldDelegate {
+extension LogonViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         passwordInput.becomeFirstResponder()
         guard textField == self.passwordInput else {
