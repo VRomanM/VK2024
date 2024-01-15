@@ -1,5 +1,5 @@
 //
-//  TableVCMyGroups.swift
+//  MyGroupsTableViewController.swift
 //  VK2024
 //
 //  Created by Роман Вертячих on 06.01.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class TableVCMyGroups: UITableViewController {
+class MyGroupsTableViewController: UITableViewController {
     private let apiVK = ApiVK()
     private var groups = [Group]()
     
@@ -49,7 +49,7 @@ class TableVCMyGroups: UITableViewController {
     
     @IBAction func addMyGroup(unwindSegue: UIStoryboardSegue){
         if unwindSegue.identifier == "addGroup" {
-            guard let groupsVC = unwindSegue.source as? TableVCGroups else {
+            guard let groupsVC = unwindSegue.source as? GroupsTableViewController else {
                 preconditionFailure("Error")
             }
             

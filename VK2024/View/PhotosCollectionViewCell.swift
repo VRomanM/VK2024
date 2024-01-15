@@ -1,5 +1,5 @@
 //
-//  PhotoCVCell.swift
+//  PhotosCollectionViewCell.swift
 //  VK2024
 //
 //  Created by Роман Вертячих on 04.01.2024.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PhotoCVCell: UICollectionViewCell {
+class PhotosCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var photo: UIImageView!
     @IBOutlet weak var name: UILabel!
     
