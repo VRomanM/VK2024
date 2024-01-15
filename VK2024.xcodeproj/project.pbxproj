@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC4C11862B5593DD00C031D0 /* Like.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC4C11852B5593DD00C031D0 /* Like.swift */; };
 		FCF9B5FE2B45C6850041F74F /* TableVCFriends.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9B5FD2B45C6850041F74F /* TableVCFriends.swift */; };
 		FCF9B6022B45E9600041F74F /* FriendsTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9B6012B45E9600041F74F /* FriendsTVCell.swift */; };
 		FCF9B6042B45EB5C0041F74F /* VK.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9B6032B45EB5C0041F74F /* VK.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC4C11852B5593DD00C031D0 /* Like.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Like.swift; sourceTree = "<group>"; };
 		FCF9B5FD2B45C6850041F74F /* TableVCFriends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableVCFriends.swift; sourceTree = "<group>"; };
 		FCF9B6012B45E9600041F74F /* FriendsTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsTVCell.swift; path = VK2024/View/FriendsTVCell.swift; sourceTree = SOURCE_ROOT; };
 		FCF9B6032B45EB5C0041F74F /* VK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				FCF9B60D2B4968470041F74F /* TableVCMyGroups.swift */,
 				FCFF71072B2F070900C04C82 /* VCNews.swift */,
 				FCF9B6052B46C0310041F74F /* CollectionVCPhoto.swift */,
+				FC4C11852B5593DD00C031D0 /* Like.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -205,6 +208,7 @@
 				FCF9B60C2B49634C0041F74F /* TableVCGroups.swift in Sources */,
 				FCF9B6062B46C0310041F74F /* CollectionVCPhoto.swift in Sources */,
 				FCF9B60E2B4968470041F74F /* TableVCMyGroups.swift in Sources */,
+				FC4C11862B5593DD00C031D0 /* Like.swift in Sources */,
 				FCF9B6042B45EB5C0041F74F /* VK.swift in Sources */,
 				FCF9B60A2B46D75A0041F74F /* PhotoCVCell.swift in Sources */,
 				FCFF71082B2F070900C04C82 /* VCNews.swift in Sources */,
