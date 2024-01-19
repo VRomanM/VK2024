@@ -2,14 +2,12 @@
 //  FriendsTableViewCell.swift
 //  VK2024
 //
-//  Created by Роман Вертячих on 19.01.2024.
+//  Created by Роман Вертячих on 03.01.2024.
 //
 
 import UIKit
 
-class FriendsTableViewCell: UITableViewCell {
-
-    @IBOutlet weak var shadowView: UIView!
+class oldFriendsTableViewCell: UITableViewCell {
     @IBOutlet weak var name: UILabel!
     @IBOutlet weak var city: UILabel!
     @IBOutlet weak var photo: UIImageView!
@@ -33,5 +31,4 @@ class FriendsTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
