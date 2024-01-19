@@ -19,14 +19,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="486-V6-xbW" customClass="FriendAvatarView" customModule="VK2024" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                        <rect key="frame" x="3" y="3" width="38" height="38"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yty-W6-Ccc">
-                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Rhz-KO-WXd">
-                                <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="38" height="38"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -41,29 +41,33 @@
                             <constraint firstAttribute="width" secondItem="486-V6-xbW" secondAttribute="height" multiplier="1:1" id="dBc-m1-pR5"/>
                             <constraint firstItem="Yty-W6-Ccc" firstAttribute="top" secondItem="486-V6-xbW" secondAttribute="top" id="ruz-wG-HQA"/>
                         </constraints>
+                        <connections>
+                            <outlet property="friendAvatar" destination="Rhz-KO-WXd" id="u48-5Z-E6A"/>
+                            <outlet property="shadowView" destination="Yty-W6-Ccc" id="y12-fP-MdG"/>
+                        </connections>
                     </view>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ie3-Xj-Txj">
-                        <rect key="frame" x="52" y="0.0" width="260" height="15"/>
+                        <rect key="frame" x="49" y="10" width="263" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2wh-qN-3E7">
-                        <rect key="frame" x="52" y="34" width="260" height="10"/>
+                        <rect key="frame" x="49" y="34" width="263" height="10"/>
                         <fontDescription key="fontDescription" type="system" pointSize="8"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="2wh-qN-3E7" firstAttribute="top" secondItem="ie3-Xj-Txj" secondAttribute="bottom" constant="19" id="13f-d4-8zx"/>
+                    <constraint firstItem="2wh-qN-3E7" firstAttribute="top" secondItem="ie3-Xj-Txj" secondAttribute="bottom" constant="9" id="13f-d4-8zx"/>
                     <constraint firstItem="ie3-Xj-Txj" firstAttribute="leading" secondItem="486-V6-xbW" secondAttribute="trailing" constant="8" id="GEu-iy-rEE"/>
-                    <constraint firstAttribute="bottom" secondItem="486-V6-xbW" secondAttribute="bottom" id="JXS-mF-SnV"/>
+                    <constraint firstAttribute="bottom" secondItem="486-V6-xbW" secondAttribute="bottom" constant="3" id="JXS-mF-SnV"/>
                     <constraint firstAttribute="trailing" secondItem="ie3-Xj-Txj" secondAttribute="trailing" constant="8" id="VC5-46-K3f"/>
-                    <constraint firstItem="486-V6-xbW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="XgP-zu-Oib"/>
+                    <constraint firstItem="486-V6-xbW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="3" id="XgP-zu-Oib"/>
                     <constraint firstItem="2wh-qN-3E7" firstAttribute="leading" secondItem="486-V6-xbW" secondAttribute="trailing" constant="8" id="beI-K0-q9w"/>
-                    <constraint firstItem="486-V6-xbW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="cZl-dB-jAB"/>
-                    <constraint firstItem="ie3-Xj-Txj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="jIK-Ic-WZc"/>
+                    <constraint firstItem="486-V6-xbW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="3" id="cZl-dB-jAB"/>
+                    <constraint firstItem="ie3-Xj-Txj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="jIK-Ic-WZc"/>
                     <constraint firstAttribute="bottom" secondItem="2wh-qN-3E7" secondAttribute="bottom" id="n5r-Uv-TBT"/>
                     <constraint firstAttribute="trailing" secondItem="2wh-qN-3E7" secondAttribute="trailing" constant="8" id="oCe-Px-b3r"/>
                 </constraints>
