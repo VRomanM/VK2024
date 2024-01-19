@@ -73,5 +73,4 @@ class Group {
         self.name = name
         self.avatar = UIImage(systemName: "person.3.fill")!
     }
-   
 }
