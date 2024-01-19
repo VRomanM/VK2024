@@ -112,12 +112,53 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="UXD-jx-CaQ" kind="relationship" relationship="rootViewController" id="dJv-1N-cjo"/>
+                        <segue destination="qYC-Ow-ESk" kind="relationship" relationship="rootViewController" id="Lsi-Og-xCQ"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vgh-if-Qg9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1633" y="-139"/>
+        </scene>
+        <!--Друзья-->
+        <scene sceneID="xOb-SV-JqP">
+            <objects>
+                <viewController id="qYC-Ow-ESk" customClass="FriendsViewController" customModule="VK2024" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="On9-SP-1FJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fiT-KL-Fip">
+                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="friendCell" id="12Z-bn-Y4f">
+                                        <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="12Z-bn-Y4f" id="HbB-o5-B0u">
+                                            <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kAb-D8-XXQ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fiT-KL-Fip" firstAttribute="top" secondItem="kAb-D8-XXQ" secondAttribute="top" id="6GF-gb-dRx"/>
+                            <constraint firstAttribute="bottom" secondItem="fiT-KL-Fip" secondAttribute="bottom" id="9in-jj-KN4"/>
+                            <constraint firstAttribute="trailing" secondItem="fiT-KL-Fip" secondAttribute="trailing" id="YhQ-8b-HDq"/>
+                            <constraint firstItem="fiT-KL-Fip" firstAttribute="leading" secondItem="kAb-D8-XXQ" secondAttribute="leading" id="x8W-Gs-F0J"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Друзья" id="N8o-qL-p0m"/>
+                    <connections>
+                        <outlet property="friendsTable" destination="fiT-KL-Fip" id="QsB-Mu-Wat"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9jF-8P-pWU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2443.5114503816794" y="-139.43661971830986"/>
         </scene>
         <!--Новости-->
         <scene sceneID="4WP-S6-BcK">
@@ -176,89 +217,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w3q-2c-D0g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2443.5114503816794" y="-802.11267605633805"/>
-        </scene>
-        <!--Друзья-->
-        <scene sceneID="tvK-1N-PG2">
-            <objects>
-                <tableViewController id="UXD-jx-CaQ" customClass="FriendsTableViewController" customModule="VK2024" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="UVH-Vd-OUY">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="friendCell" rowHeight="50" id="NFt-8u-pWo" customClass="FriendsTableViewCell" customModule="VK2024" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="55.333332061767578" width="393" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NFt-8u-pWo" id="MV0-Mm-4Fc">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Srm-11-5fA">
-                                            <rect key="frame" x="8" y="0.0" width="50" height="50"/>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name Friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GIA-Xc-Bw4">
-                                            <rect key="frame" x="66" y="0.0" width="319" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City friend" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7T-sW-MDE">
-                                            <rect key="frame" x="66" y="29" width="319" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="T7T-sW-MDE" secondAttribute="bottom" id="018-Rq-ioO"/>
-                                        <constraint firstAttribute="trailing" secondItem="T7T-sW-MDE" secondAttribute="trailing" constant="8" id="5ND-OB-xTf"/>
-                                        <constraint firstAttribute="bottom" secondItem="Srm-11-5fA" secondAttribute="bottom" id="FrC-yE-FGt"/>
-                                        <constraint firstItem="Srm-11-5fA" firstAttribute="leading" secondItem="MV0-Mm-4Fc" secondAttribute="leading" constant="8" id="IHD-xy-wYp"/>
-                                        <constraint firstItem="GIA-Xc-Bw4" firstAttribute="leading" secondItem="Srm-11-5fA" secondAttribute="trailing" constant="8" id="K5V-lN-9LB"/>
-                                        <constraint firstItem="T7T-sW-MDE" firstAttribute="top" secondItem="GIA-Xc-Bw4" secondAttribute="bottom" constant="8" id="dMz-h1-xYm"/>
-                                        <constraint firstItem="T7T-sW-MDE" firstAttribute="leading" secondItem="Srm-11-5fA" secondAttribute="trailing" constant="8" id="eVh-DF-yGN"/>
-                                        <constraint firstAttribute="bottom" secondItem="GIA-Xc-Bw4" secondAttribute="bottom" constant="29" id="nAN-f8-kUN"/>
-                                        <constraint firstItem="Srm-11-5fA" firstAttribute="top" secondItem="MV0-Mm-4Fc" secondAttribute="top" id="pQO-Op-4ei"/>
-                                        <constraint firstItem="GIA-Xc-Bw4" firstAttribute="top" secondItem="MV0-Mm-4Fc" secondAttribute="top" id="syw-ec-Cmo"/>
-                                        <constraint firstAttribute="trailing" secondItem="Srm-11-5fA" secondAttribute="trailing" constant="335" id="zeg-9Z-Yq4"/>
-                                        <constraint firstAttribute="trailing" secondItem="GIA-Xc-Bw4" secondAttribute="trailing" constant="8" id="zjE-BD-uEe"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="city" destination="T7T-sW-MDE" id="Fbm-nr-qOc"/>
-                                    <outlet property="name" destination="GIA-Xc-Bw4" id="STs-2i-bLs"/>
-                                    <outlet property="photo" destination="Srm-11-5fA" id="uBK-lc-uBA"/>
-                                </connections>
-                            </tableViewCell>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="friendCellBasic" textLabel="K0l-zc-6LM" rowHeight="50" style="IBUITableViewCellStyleDefault" id="ho0-rQ-YtQ">
-                                <rect key="frame" x="0.0" y="105.33333206176758" width="393" height="50"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ho0-rQ-YtQ" id="QwF-Te-dSE">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="50"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K0l-zc-6LM">
-                                            <rect key="frame" x="20" y="0.0" width="353" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="0.0"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <sections/>
-                        <connections>
-                            <outlet property="dataSource" destination="UXD-jx-CaQ" id="Bha-rw-Ncf"/>
-                            <outlet property="delegate" destination="UXD-jx-CaQ" id="gG0-Gt-YYa"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Друзья" id="e9R-KC-jJd"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="6Dl-hp-ywI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2443.5114503816794" y="-139.43661971830986"/>
         </scene>
         <!--Фотографии-->
         <scene sceneID="Nxc-BW-fIq">

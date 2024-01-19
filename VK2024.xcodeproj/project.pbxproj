@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FCF9B5FE2B45C6850041F74F /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9B5FD2B45C6850041F74F /* FriendsTableViewController.swift */; };
-		FCF9B6022B45E9600041F74F /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9B6012B45E9600041F74F /* FriendsTableViewCell.swift */; };
+		FC72A5B92B5ABC02009F54E8 /* FriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72A5B82B5ABC02009F54E8 /* FriendsViewController.swift */; };
+		FC72A5BC2B5AC03C009F54E8 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72A5BA2B5AC03C009F54E8 /* FriendsTableViewCell.swift */; };
+		FC72A5BD2B5AC03C009F54E8 /* FriendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC72A5BB2B5AC03C009F54E8 /* FriendsTableViewCell.xib */; };
+		FC72A5BF2B5AC3CA009F54E8 /* FriendAvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC72A5BE2B5AC3CA009F54E8 /* FriendAvatarView.swift */; };
 		FCF9B6042B45EB5C0041F74F /* VK.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9B6032B45EB5C0041F74F /* VK.swift */; };
 		FCF9B6062B46C0310041F74F /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9B6052B46C0310041F74F /* PhotosCollectionViewController.swift */; };
 		FCF9B6082B46C1E40041F74F /* ApiVK.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF9B6072B46C1E40041F74F /* ApiVK.swift */; };
@@ -26,8 +28,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		FCF9B5FD2B45C6850041F74F /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
-		FCF9B6012B45E9600041F74F /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FriendsTableViewCell.swift; path = VK2024/View/FriendsTableViewCell.swift; sourceTree = SOURCE_ROOT; };
+		FC72A5B82B5ABC02009F54E8 /* FriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsViewController.swift; sourceTree = "<group>"; };
+		FC72A5BA2B5AC03C009F54E8 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
+		FC72A5BB2B5AC03C009F54E8 /* FriendsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsTableViewCell.xib; sourceTree = "<group>"; };
+		FC72A5BE2B5AC3CA009F54E8 /* FriendAvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendAvatarView.swift; sourceTree = "<group>"; };
 		FCF9B6032B45EB5C0041F74F /* VK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK.swift; sourceTree = "<group>"; };
 		FCF9B6052B46C0310041F74F /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		FCF9B6072B46C1E40041F74F /* ApiVK.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiVK.swift; sourceTree = "<group>"; };
@@ -69,7 +73,8 @@
 		FCF9B6002B45E8220041F74F /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FCF9B6012B45E9600041F74F /* FriendsTableViewCell.swift */,
+				FC72A5BA2B5AC03C009F54E8 /* FriendsTableViewCell.swift */,
+				FC72A5BB2B5AC03C009F54E8 /* FriendsTableViewCell.xib */,
 				FCFF71032B2EFE5A00C04C82 /* NewsTableViewCell.swift */,
 				FCFF71042B2EFE5A00C04C82 /* NewsTableViewCell.xib */,
 				FCF9B6092B46D75A0041F74F /* PhotosCollectionViewCell.swift */,
@@ -119,7 +124,8 @@
 		FCFF70FE2B2DF87C00C04C82 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				FCF9B5FD2B45C6850041F74F /* FriendsTableViewController.swift */,
+				FC72A5BE2B5AC3CA009F54E8 /* FriendAvatarView.swift */,
+				FC72A5B82B5ABC02009F54E8 /* FriendsViewController.swift */,
 				FCF9B60B2B49634C0041F74F /* GroupsTableViewController.swift */,
 				FCFF70ED2B2DB41D00C04C82 /* LogonViewController.swift */,
 				FCF9B60D2B4968470041F74F /* MyGroupsTableViewController.swift */,
@@ -188,6 +194,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCFF70F62B2DB41F00C04C82 /* LaunchScreen.storyboard in Resources */,
+				FC72A5BD2B5AC03C009F54E8 /* FriendsTableViewCell.xib in Resources */,
 				FCFF70F32B2DB41F00C04C82 /* Assets.xcassets in Resources */,
 				FCFF71062B2EFE5A00C04C82 /* NewsTableViewCell.xib in Resources */,
 				FCFF70F12B2DB41E00C04C82 /* Main.storyboard in Resources */,
@@ -203,15 +210,16 @@
 			files = (
 				FCFF71052B2EFE5A00C04C82 /* NewsTableViewCell.swift in Sources */,
 				FCF9B60C2B49634C0041F74F /* GroupsTableViewController.swift in Sources */,
+				FC72A5BF2B5AC3CA009F54E8 /* FriendAvatarView.swift in Sources */,
+				FC72A5B92B5ABC02009F54E8 /* FriendsViewController.swift in Sources */,
+				FC72A5BC2B5AC03C009F54E8 /* FriendsTableViewCell.swift in Sources */,
 				FCF9B6062B46C0310041F74F /* PhotosCollectionViewController.swift in Sources */,
 				FCF9B60E2B4968470041F74F /* MyGroupsTableViewController.swift in Sources */,
 				FCF9B6042B45EB5C0041F74F /* VK.swift in Sources */,
 				FCF9B60A2B46D75A0041F74F /* PhotosCollectionViewCell.swift in Sources */,
 				FCFF71082B2F070900C04C82 /* NewsViewController.swift in Sources */,
 				FCFF70EE2B2DB41D00C04C82 /* LogonViewController.swift in Sources */,
-				FCF9B6022B45E9600041F74F /* FriendsTableViewCell.swift in Sources */,
 				FCFF70EA2B2DB41D00C04C82 /* AppDelegate.swift in Sources */,
-				FCF9B5FE2B45C6850041F74F /* FriendsTableViewController.swift in Sources */,
 				FCF9B6082B46C1E40041F74F /* ApiVK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
